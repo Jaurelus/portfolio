@@ -1,0 +1,280 @@
+html.dark body {
+  background-color: #121212;
+}
+html.dark p {
+  color: #f0f7ee;
+}
+html.dark h1 {
+  color: #98d9c2;
+}
+
+body {
+  background-color: #f0f7ee;
+  text-align: center;
+}
+body.dark {
+  background-color: #121212;
+}
+html.dark .nav:visited {
+  color: #98d9c2;
+}
+html.dark .navbar {
+  border-bottom: 2px solid #98d9c2;
+}
+html.dark .slideshowbox {
+  background-color: #121212;
+}
+
+#darkmode {
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  background-color: #f0f7ee;
+  border-radius: 8px;
+  font-size: 25px;
+  border-color: black;
+  border-width: 3px;
+}
+
+html.dark #darkmode {
+  background-color: #121212;
+  border-radius: 8px;
+  font-size: 25px;
+  border-color: #f0f7ee;
+  border-width: 3px;
+  color: #f0f7ee;
+}
+
+.navbar {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  border-bottom: 2px solid #516763;
+  margin-bottom: 5%;
+}
+.navbar.dark {
+  border-bottom: 2px solid #98d9c2;
+}
+
+.nav:link {
+  font-size: 24px;
+  margin: 100px;
+  color: rgb(148, 229, 8);
+}
+
+.nav:visited {
+  margin: 100px;
+  color: #516763;
+}
+
+.nav:hover {
+  color: rgb(254, 9, 54);
+}
+
+.nav:active {
+  margin: 100px;
+  color: rgb(91, 205, 3);
+}
+
+.nav.dark:link {
+  font-size: 24px;
+  margin: 100px;
+  color: rgb(8, 96, 229);
+}
+
+.nav.dark:hover {
+  color: rgb(254, 9, 54);
+}
+
+.nav.dark:active {
+  margin: 100px;
+  color: rgb(91, 205, 3);
+}
+.nav.dark:visited {
+  color: #98d9c2;
+}
+h1 {
+  text-align: right;
+  color: rgb(70, 80, 40);
+  font-size: 3em;
+}
+p {
+  color: rgb(60, 50, 30);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  border-radius: 50%;
+}
+h1.dark {
+  color: #98d9c2;
+}
+p.dark {
+  color: #f0f7ee;
+}
+#contact {
+  display: block;
+  background-color: #f0f7ee;
+  border-color: rgb(60, 50, 30);
+  border-radius: 10px;
+  margin: auto;
+  bottom: 25px;
+  color: #516763;
+}
+.slideshowbox {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0f7ee;
+  height: 500px;
+  width: 500px;
+  margin-bottom: 5%;
+}
+.slideshowbox.dark {
+  background-color: #121212;
+}
+
+.slideshowPics {
+  width: 100%;
+  height: 100%;
+  padding: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.buttonGroup {
+  display: flex;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+.buttons {
+  display: inline-flex;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #516763;
+  border-radius: 50%;
+  width: 20%;
+  height: 7vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+#prev {
+  background-color: #516763;
+  color: white;
+}
+
+#next {
+  background-color: #516763;
+  color: white;
+}
+#prevMobile,
+#nextMobile {
+  display: none;
+}
+
+.mainContent {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#logo {
+  position: absolute;
+  width: 5%;
+  left: 25px;
+  top: 5px;
+}
+body.dark #contact {
+  background-color: #121212;
+  color: white;
+  border-color: #98d9c2;
+}
+
+@media (max-width: 600px) {
+  body {
+    max-width: 100%;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  #darkmode {
+    color: #121212;
+    top: 5px;
+  }
+  .navbar {
+    text-align: center;
+    position: relative;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    border-bottom: 2px solid #516763;
+    margin-bottom: 5%;
+  }
+  .navLinks {
+    position: relative;
+    display: flex;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav:link {
+    font-size: 2.5em;
+    margin: 10%;
+  }
+  .nav:link.dark {
+    font-size: 2.5em;
+    margin: 15%;
+  }
+  #logo {
+    transform: scale(2);
+  }
+
+  .mainContent {
+    width: 60%;
+    font-size: 0.8 em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .navbar {
+    font-size: 10px;
+  }
+  .navLinks {
+    font-size: 0.75em;
+  }
+  .slideshowbox {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buttonGroup {
+    display: flex;
+    width: 100%;
+  }
+  #prev,
+  #next {
+    display: none;
+  }
+  #prevMobile,
+  #nextMobile {
+    display: flex;
+    background-color: #516763;
+    color: white;
+  }
+  #prevMobile {
+    margin-right: 25%;
+  }
+}

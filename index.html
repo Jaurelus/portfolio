@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <div class="navbar">
+      <img src="images/logo.png" id="logo" />
+      <div class="navLinks">
+        <a class="nav" href="index.html" id="p1">Home</a>
+        <a class="nav" href="about.html" id="p2">About</a>
+        <a class="nav" href="portfolio.html" id="p3">Portfolio</a>
+      </div>
+    </div>
+    <button id="darkmode" onclick="darkMode();">☾</button>
+  </head>
+  <body onload="getTheme();">
+    <div class="mainContent">
+      <div class="pichead">
+        <h1 id="name">Jayden Aurelus</h1>
+        <img src="images/headshot.jpg" id="homepic" alt="My Photo" />
+      </div>
+      <p id="homep">
+        Hey, I'm Jayden and I'm currently a student at UCF studying computer
+        science. There's a lot of cool projects I'm looking to learn and new
+        skills I'm looking to teach myself as well. These projects and skills
+        should be on full display as should my personality (if I do this right).
+        <br /><br />
+      </p>
+      <button id="contact">Contact Me</button>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
