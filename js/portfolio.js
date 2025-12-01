@@ -62,5 +62,5 @@ document.getElementById("ghPic").addEventListener("mouseout", () => {
   document.getElementById("ghPrompt").style.display = "none";
 });
 document.getElementById("ghPic").addEventListener("click", () => {
-  window.open("https://github.com/Jaurelus12");
+  window.open("https://github.com/Jaurelus");
 });
