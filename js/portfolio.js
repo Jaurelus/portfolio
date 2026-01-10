@@ -32,6 +32,7 @@ function darkMode() {
     localStorage.setItem("theme", "light");
   }
 }
+
 function setTheme() {
   document.body.classList.add("dark");
   paragraphs.forEach((p) => {
@@ -46,6 +47,7 @@ function setTheme() {
   document.getElementById("contact").classList.add("dark");
   document.getElementById("darkMode").classList.add("dark");
 }
+
 //applytheme
 function getTheme() {
   if (localStorage.getItem("theme") == "dark") {
@@ -64,3 +66,6 @@ document.getElementById("ghPic").addEventListener("mouseout", () => {
 document.getElementById("ghPic").addEventListener("click", () => {
   window.open("https://github.com/Jaurelus");
 });
+
+//
+function previewResume() {}
