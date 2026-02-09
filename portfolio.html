@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,9 +13,9 @@
         <a class="nav" href="portfolio.html" data-id="p3">Portfolio</a>
       </div>
     </div>
-    <button id="darkmode" onclick="darkMode();">☾</button>
+    <button id="darkmode" onclick="darkMode()">☾</button>
   </head>
-  <body onload="getTheme();">
+  <body onload="getTheme()">
     <div class="mainContent">
       <h1>Jayden Aurelus</h1>
 
@@ -33,11 +33,10 @@
         <img
           id="resumePic"
           src="images/resume.png"
-          onmouseenter="previewResume();"
+          onmouseenter="previewResume()"
         />
-        <div class="previewR">
-          <iframe id="resPre" src="Aurelus_Jayden_Resume.pdf"></iframe>
-        </div>
+        <p id="resHelper">Click here to preview my resume</p>
+
         <a href="Aurelus_Jayden_Resume.pdf" download="">Download resume</a>
       </div>
       <button id="contact">Contact Me</button>

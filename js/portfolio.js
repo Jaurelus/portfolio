@@ -67,5 +67,21 @@ document.getElementById("ghPic").addEventListener("click", () => {
   window.open("https://github.com/Jaurelus");
 });
 
-//
-function previewResume() {}
+// Control behavior of the resume picture
+function previewResume() {
+  const res = document.getElementById("resumePic");
+
+  //Change the opacity, and show helper text
+  res.style.cursor = "pointer";
+  res.style.opacity = 0.5;
+  document.getElementById("resHelper").style.display = "contents";
+  //Event listener for click
+  res.addEventListener("click", () => {
+    window.open("../Aurelus_Jayden_Resume.pdf", "_blank");
+  });
+  //Event listener for mosuse exit to undo everything
+  res.addEventListener("mouseleave", () => {
+    res.style.opacity = 1.0;
+    document.getElementById("resHelper").style.display = "none";
+  });
+}
