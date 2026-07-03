@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap");
 
 html.dark body {
   background-color: #121212;
@@ -13,7 +13,7 @@ html.dark h1 {
 body {
   background-color: #f0f7ee;
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 body.dark {
   background-color: #121212;
@@ -100,16 +100,9 @@ h1 {
   text-align: right;
   color: rgb(70, 80, 40);
   font-size: 3em;
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
 }
-p {
-  color: rgb(60, 50, 30);
-  text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1.25em;
-  font-weight: 500;
-  border-radius: 50%;
-}
+
 h1.dark {
   color: #98d9c2;
 }

@@ -1,65 +1,77 @@
-const contactbtn = document.getElementById("contact");
-const darkmodebtn= document.getElementById("darkmode")
-const paragraphs = document.querySelectorAll("p")
-const navigation = document.querySelector(".navbar")
-const links = document.querySelectorAll(".nav")
-const prev = document.getElementById("prev")
-const next = document.getElementById("next")
+//const contactbtn = document.getElementById("contact");
+const darkmodebtn = document.getElementById("darkmode");
+const paragraphs = document.querySelectorAll("p");
+const navigation = document.querySelector(".navbar");
+const links = document.querySelectorAll(".nav");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const slideshowBox = document.querySelector(".slideshowbox");
 
 //Contact Button
-contactbtn.addEventListener("click", function() {
-    window.location.href="mailto:jaurelus12@gmail.com"
+/*
+contactbtn.addEventListener("click", function () {
+  window.location.href = "mailto:jaurelus12@gmail.com";
 });
-
-
+*/
 //Dark Mode
-function darkMode(){
-    document.body.classList.toggle("dark");
+function darkMode() {
+  document.body.classList.toggle("dark");
 
-    paragraphs.forEach(p=>{
-        p.classList.toggle("dark");
-    })
-    navigation.classList.toggle("dark");
+  paragraphs.forEach((p) => {
+    p.classList.toggle("dark");
+  });
+  navigation.classList.toggle("dark");
 
-    links.forEach(nav=>{
-        nav.classList.toggle("dark");
-    })
-    document.querySelector("h1").classList.toggle("dark");
+  links.forEach((nav) => {
+    nav.classList.toggle("dark");
+  });
+  document.querySelector("h1").classList.toggle("dark");
 
-    document.getElementById("contact").classList.toggle("dark")
+  document.getElementById("contact").classList.toggle("dark");
 
-
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("theme","dark")
-    }
-    else{localStorage.setItem("theme", "light")}
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 }
 
+function setTheme() {
+  document.body.classList.add("dark");
+  paragraphs.forEach((p) => {
+    p.classList.add("dark");
+  });
+  navigation.classList.add("dark");
 
-function setTheme(){
-document.body.classList.add("dark");
-paragraphs.forEach(p=>{
-        p.classList.add("dark");
-    })
-    navigation.classList.add("dark");
-
-    links.forEach(nav=>{
-        nav.classList.add("dark");
-    })
-    document.querySelector("h1").classList.add("dark");
-    document.getElementById("contact").classList.add("dark")
-
+  links.forEach((nav) => {
+    nav.classList.add("dark");
+  });
+  document.querySelector("h1").classList.add("dark");
+  document.getElementById("contact").classList.add("dark");
 }
 //applytheme
-function getTheme(){
-
-if(localStorage.getItem("theme")=="dark"){
-setTheme();
+function getTheme() {
+  if (localStorage.getItem("theme") == "dark") {
+    setTheme();
+  }
+  console.log(`${localStorage.getItem("theme")}`);
 }
-console.log(`${localStorage.getItem("theme")}` );
+
+//About Page
+let i = 0;
+function nextPic() {
+  const pics = document.querySelectorAll(".slideshowPics");
+  //Next button shows next image
+  pics[i].style.display = "none";
+  i = (i + 1) % pics.length;
+  pics[i].style.display = "flex";
 }
-
-
+function prevPic() {
+  const pics = document.querySelectorAll(".slideshowPics");
+  pics[i].style.display = "none";
+  i = (i + pics.length - 1) % pics.length;
+  pics[i].style.display = "flex";
+}
 /*
 document.getElementById("p1").addEventListener("click", (event)=>{
     event.preventDefault();
