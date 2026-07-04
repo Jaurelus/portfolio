@@ -1,19 +1,8 @@
-//const contactbtn = document.getElementById("contact");
-const darkmodebtn = document.getElementById("darkmode");
 const paragraphs = document.querySelectorAll("p");
 const navigation = document.querySelector(".navbar");
 const links = document.querySelectorAll(".nav");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
-const slideshowBox = document.querySelector(".slideshowbox");
 const h1 = document.querySelectorAll("h1");
 
-//Contact Button
-/*
-contactbtn.addEventListener("click", function () {
-  window.location.href = "mailto:jaurelus12@gmail.com";
-});
-*/
 //Dark Mode
 function darkMode() {
   document.body.classList.toggle("dark");
@@ -107,53 +96,3 @@ function previewResume() {
     document.getElementById("resHelper").style.display = "none";
   });
 }
-
-/*
-document.getElementById("p1").addEventListener("click", (event)=>{
-    event.preventDefault();
-    if(navigation.classList.contains("dark")){
-        window.location.href = "index.html"
-        getTheme();
-    }
-})
-
-    
-
-document.getElementById("p2").addEventListener("click", (event)=>{
-    event.preventDefault();
-   if(navigation.classList.contains("dark")){
-        getTheme();
-        window.location.href = "about.html"
-        getTheme();
-}
-})
-
-document.getElementById("p3").addEventListener("click", (event)=>{
-    event.preventDefault();
-    if(navigation.classList.contains("dark")){
-        window.location.href = "portfolio.html"
-    getTheme();
-}
-})
-
-/*
-darkmodebtn.addEventListener("click", function(){
-    paragraphs.forEach(p=>{
-        p.classList.toggle("dark");
-    })
-}
-)
-
-darkmodebtn.addEventListener("click", function(){
-    navigation.classList.toggle("dark");
-})
-
-darkmodebtn.addEventListener("click", function(){
-    links.forEach(nav=>{
-        nav.classList.toggle("dark");
-    })
-darkmodebtn.addEventListener("click", ()=>{
-    document.querySelector("h1").classList.toggle("dark");
-})
-})
-*/

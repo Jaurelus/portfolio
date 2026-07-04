@@ -84,11 +84,6 @@ a:visited {
   font-size: 1.5em;
   font-optical-sizing: auto;
 }
-#homePage {
-}
-#aboutPage {
-}
-
 .homeMainContent {
   width: 100%;
 }
@@ -147,8 +142,6 @@ a:visited {
 #homep {
   width: 50%;
   text-align: center;
-}
-#aboutPage {
 }
 
 h1 {
@@ -319,9 +312,6 @@ h1 {
   padding-bottom: 5%;
 }
 
-#resPre {
-  width: 100% !important;
-}
 #resHelper {
   position: sticky;
   margin-top: -5%;
