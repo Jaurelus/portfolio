@@ -6,6 +6,7 @@ const links = document.querySelectorAll(".nav");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const slideshowBox = document.querySelector(".slideshowbox");
+const h1 = document.querySelectorAll("h1");
 
 //Contact Button
 /*
@@ -25,7 +26,9 @@ function darkMode() {
   links.forEach((nav) => {
     nav.classList.toggle("dark");
   });
-  document.querySelector("h1").classList.toggle("dark");
+  h1.forEach((h1) => {
+    h1.classList.toggle("dark");
+  });
 
   document.getElementById("contact").classList.toggle("dark");
 
@@ -46,7 +49,9 @@ function setTheme() {
   links.forEach((nav) => {
     nav.classList.add("dark");
   });
-  document.querySelector("h1").classList.add("dark");
+  h1.forEach((h1) => {
+    h1.classList.toggle("dark");
+  });
   document.getElementById("contact").classList.add("dark");
 }
 //applytheme
@@ -72,6 +77,37 @@ function prevPic() {
   i = (i + pics.length - 1) % pics.length;
   pics[i].style.display = "flex";
 }
+
+//Contact Page
+document.getElementById("ghPic").addEventListener("mouseover", () => {
+  document.getElementById("ghPrompt").style.display = "flex";
+});
+document.getElementById("ghPic").addEventListener("mouseout", () => {
+  document.getElementById("ghPrompt").style.display = "none";
+});
+document.getElementById("ghPic").addEventListener("click", () => {
+  window.open("https://github.com/Jaurelus");
+});
+
+// Control behavior of the resume picture
+function previewResume() {
+  const res = document.getElementById("resumePic");
+
+  //Change the opacity, and show helper text
+  res.style.cursor = "pointer";
+  res.style.opacity = 0.5;
+  document.getElementById("resHelper").style.display = "contents";
+  //Event listener for click
+  res.addEventListener("click", () => {
+    window.open("../Aurelus_Jayden_Resume.pdf", "_blank");
+  });
+  //Event listener for mosuse exit to undo everything
+  res.addEventListener("mouseleave", () => {
+    res.style.opacity = 1.0;
+    document.getElementById("resHelper").style.display = "none";
+  });
+}
+
 /*
 document.getElementById("p1").addEventListener("click", (event)=>{
     event.preventDefault();
