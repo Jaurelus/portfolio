@@ -18,6 +18,8 @@ Ash gray: #516763
   --bgd: #121212;
   --mint: #98d9c2;
   --pblue: #afdedc;
+  --tile-light: #516763;
+  --tile-dark: #222222;
 }
 .mooli-regular {
   font-family: "Mooli", sans-serif;
@@ -187,7 +189,10 @@ h1 {
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: #222222;
+  background-color: var(--tile-light);
+}
+.bentoBox p {
+  color: var(--bgl);
 }
 .firstCol {
   flex-direction: column;
@@ -398,6 +403,9 @@ h1 {
 /* Dark */
 body.dark {
   background-color: var(--bgd);
+}
+body.dark .bentoBox {
+  background-color: var(--tile-dark);
 }
 p.dark {
   color: var(--bgl);
