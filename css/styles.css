@@ -58,7 +58,7 @@ body {
 section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@ a:visited {
   height: 50px;
 }
 .name {
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: center;
 }
 .blurb {
@@ -160,70 +160,126 @@ h1 {
   bottom: 25px;
   color: #516763;
 }
-
-.slideshowbox {
-  background-color: #f0f7ee;
-  height: 500px;
-  width: 50%;
-  margin-bottom: 5%;
+.bento {
   margin-top: 5%;
-  margin-right: 10%;
-}
 
-.slideshowPics {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 2%;
+  flex-direction: row;
+}
+#dunk {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  padding: auto;
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  border-radius: 10%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
 }
-
-.buttonGroup {
+.bentoBox {
   display: flex;
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
-  margin-top: 2%;
-  gap: 25%;
-}
-
-.buttons {
-  display: inline-flex;
-  margin: auto;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #516763;
-  border-radius: 50%;
-  width: 35%;
-  height: 7vh;
-  text-align: center;
-  justify-content: center;
+  flex-direction: column;
+  border-radius: 10%;
+  display: flex;
   align-items: center;
-  font-size: 1.5em;
-  cursor: pointer;
+  flex: 1;
+  background-color: #222222;
+}
+.firstCol {
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.firstCol > p {
+  position: relative;
+  z-index: 2;
+}
+.secondCol {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+}
+.thirdCol {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 3%;
+}
+#sports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
-#prev {
-  background-color: #516763;
-  color: white;
+#fl-map {
+  width: 120px;
+  height: auto;
+  fill: var(--mint);
+}
+#gamer {
+  width: 60px;
+  height: auto;
+}
+#dumbbell {
+  width: 60px;
+  height: auto;
+}
+#muscle {
+  width: 60px;
+  height: auto;
+}
+#FL {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#xbox {
+  width: 60px;
+  height: auto;
+}
+.football {
+  margin-top: 5%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: start;
+}
+.soccer {
+  margin-right: 25%;
+  display: flex;
+  justify-content: end;
+}
+/* two-icon boxes: diagonal, like Sports */
+.pair img:nth-of-type(1) {
+  margin-top: auto;
+  margin-left: 25%;
+}
+.pair img:nth-of-type(2) {
+  margin-bottom: auto;
+  margin-right: 25%;
 }
 
-#next {
-  background-color: #516763;
-  color: white;
+#football {
+  width: 60px;
+  height: auto;
 }
-
-#prevMobile,
-#nextMobile {
-  display: none;
+#soccer {
+  width: 60px;
+  height: auto;
 }
-
 .aboutMainContent {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 5%;
   gap: 5%;
 }
@@ -232,7 +288,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 50%;
+  max-width: 30%;
   margin-left: 10%;
 }
 #openCurl {
@@ -249,12 +305,14 @@ h1 {
   z-index: -200;
 }
 #homeChip {
+  position: absolute;
   margin-top: -5%;
-  margin-right: -90%;
+  right: -5%;
 }
 #aboutChip {
+  position: absolute;
   margin-top: 10%;
-  margin-left: -2%;
+  margin-left: -95%;
 }
 #portfolioChip1 {
   position: absolute;

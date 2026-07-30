@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Mooli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body onload="getTheme()">
@@ -25,6 +26,7 @@
     </div>
     <div class="homeMainContent">
       <img src="images/logo.png" id="logo" alt="Jayden Aurelus logo" />
+      <h1 class="name">Jayden Aurelus</h1>
       <svg class="chip" id="homeChip" width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke-width="2">
           <path d="M20 40 H90 V90 H160" />
@@ -55,7 +57,6 @@
           <circle cx="190" cy="150" r="4" />
         </g>
       </svg>
-      <h1 class="name">Jayden Aurelus</h1>
 
       <div class="pichead">
         <div class="picText">
@@ -116,7 +117,7 @@
         </g>
       </svg>
       <div class="aboutText">
-      <h1 class="name">Jayden Aurelus</h1>
+        <h1 class="name">Jayden Aurelus</h1>
 
         <p>
           Hi, this is a little bit about me, the side of me that isn't behind a
@@ -136,61 +137,90 @@
           than hopping on the game to unwind.
         </p>
       </div>
-      <div class="slideshowbox">
-        <img src="images/link.jpg" class="slideshowPics" alt="Jayden smiling in a white shirt and navy bow tie at a formal event" />
-        <img src="images/household.jpg" style="display: none" class="slideshowPics" alt="Jayden with his parents and sister posing together in a hallway" />
-        <img src="images/family.jpg" style="display: none" class="slideshowPics" alt="Jayden with extended family posing together at a family gathering" />
-        <img src="images/dunk.jpg" style="display: none" class="slideshowPics" alt="Jayden dunking a basketball on an outdoor court" />
-        <img src="images/fullbody.jpg" style="display: none" class="slideshowPics" alt="Jayden posing in a white graphic t-shirt and jeans in a parking garage" />
-        <video src="images/rows.mov" style="display: none" class="slideshowPics" autoplay controls muted aria-label="Video clip of Jayden rowing"></video>
-        <div class="buttonGroup">
-          <button id="prev" class="buttons" onclick="nextPic()">⬅</button>
-          <button id="prevMobile" class="buttons" onclick="nextPic()">
-            << /button>
-              <button id="next" class="buttons" onclick="prevPic()">➡</button>
-              <button id="nextMobile" class="buttons" onclick="prevPic()">></button>
+      <div class="bento">
+        <div class="firstCol bentoBox">
+          <p>Basketball</p>
+          <img src="images/dunk.png" id="dunk" />
+        </div>
+        <div class="secondCol ">
+          <div class="bentoBox pair">
+            <p>Gym</p>
+            <img src="images/dumbbell.svg" id="dumbbell" />
+            <img src="images/muscle.svg" id="muscle" />
+
+          </div>
+          <div class="bentoBox" id="sports">
+            <p>Sports</p>
+            <div class="football">
+              <img src="images/football.svg" id="football" />
+
+            </div>
+            <div class="soccer">
+              <img src="images/soccerball.svg" id="soccer" />
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="thirdCol ">
+          <div class="bentoBox">
+            <p>FL Boy</p>
+            <div id="FL"> <img src="images/florida.svg" id="fl-map" />
+            </div>
+          </div>
+          <div class="bentoBox pair">
+            <p>Gamer</p> <img src="images/gamer.svg" id="gamer" /> <img src="images/Xbox_Logo.svg" id="xbox" />
+          </div>
         </div>
       </div>
+    </div>
+
+
+
+
+    </div>
 
     </div>
   </section>
 
   <section id="portfolioPage">
-   
-      <h1 class="name">Jayden Aurelus</h1>
+
+    <h1 class="name" id="portName">Jayden Aurelus</h1>
 
     <div class="profileMainContent">
- <svg class="chip" id="portfolioChip1" width="160" height="160" viewBox="0 0 240 240"
-      xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke-width="2">
-        <path d="M20 40 H90 V90 H160" />
-        <path d="M90 90 V150 H60" />
-        <path d="M160 90 V30 H220" />
-        <path d="M160 150 H120 V200" />
-        <path d="M60 150 V210" />
-        <path d="M20 40 V10" />
-        <path d="M20 100 H50 V150" />
-        <path d="M160 150 V190 H210" />
-        <path d="M90 30 V60" />
-        <path d="M190 90 V60 H210" />
-        <path d="M50 60 H20" />
-        <path d="M120 200 V230" />
-        <path d="M190 150 H220" />
-        <path d="M60 210 H30 V230" />
-      </g>
-      <g>
-        <circle cx="20" cy="40" r="4" />
-        <circle cx="90" cy="90" r="10" />
-        <circle cx="160" cy="90" r="10" />
-        <circle cx="160" cy="150" r="7" />
-        <circle cx="60" cy="150" r="4" />
-        <circle cx="120" cy="200" r="4" />
-        <circle cx="50" cy="60" r="7" />
-        <circle cx="190" cy="90" r="4" />
-        <circle cx="60" cy="210" r="4" />
-        <circle cx="190" cy="150" r="4" />
-      </g>
-    </svg>
+      <svg class="chip" id="portfolioChip1" width="160" height="160" viewBox="0 0 240 240"
+        xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke-width="2">
+          <path d="M20 40 H90 V90 H160" />
+          <path d="M90 90 V150 H60" />
+          <path d="M160 90 V30 H220" />
+          <path d="M160 150 H120 V200" />
+          <path d="M60 150 V210" />
+          <path d="M20 40 V10" />
+          <path d="M20 100 H50 V150" />
+          <path d="M160 150 V190 H210" />
+          <path d="M90 30 V60" />
+          <path d="M190 90 V60 H210" />
+          <path d="M50 60 H20" />
+          <path d="M120 200 V230" />
+          <path d="M190 150 H220" />
+          <path d="M60 210 H30 V230" />
+        </g>
+        <g>
+          <circle cx="20" cy="40" r="4" />
+          <circle cx="90" cy="90" r="10" />
+          <circle cx="160" cy="90" r="10" />
+          <circle cx="160" cy="150" r="7" />
+          <circle cx="60" cy="150" r="4" />
+          <circle cx="120" cy="200" r="4" />
+          <circle cx="50" cy="60" r="7" />
+          <circle cx="190" cy="90" r="4" />
+          <circle cx="60" cy="210" r="4" />
+          <circle cx="190" cy="150" r="4" />
+        </g>
+      </svg>
       <div class="githubYap">
 
         <div class="ghWindow">
@@ -202,9 +232,9 @@
             stacks such as MERN, .NET, or even a splash of Python.
           </p>
         </div>
-        <button id="contact">Contact Me</button> 
-        <svg class="chip" id="portfolioChip2" width="240" height="240"
-          viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <button id="contact">Contact Me</button>
+        <svg class="chip" id="portfolioChip2" width="240" height="240" viewBox="0 0 240 240"
+          xmlns="http://www.w3.org/2000/svg">
           <g fill="none" stroke-width="2">
             <path d="M20 40 H90 V90 H160" />
             <path d="M90 90 V150 H60" />
@@ -238,7 +268,8 @@
       </div>
       <div class="resume">
         <p>Below is my resume, available to be previewed and downloaded.</p>
-        <img id="resumePic" src="images/resume.png" onmouseenter="previewResume()" alt="Preview of Jayden Aurelus's resume" />
+        <img id="resumePic" src="images/resume.png" onmouseenter="previewResume()"
+          alt="Preview of Jayden Aurelus's resume" />
         <p id="resHelper">Click here to preview my resume</p>
 
         <a id="anchor" href="Aurelus_Jayden_Resume.pdf" download="">Download resume</a>
