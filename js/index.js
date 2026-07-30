@@ -1,111 +1,98 @@
-const contactbtn = document.getElementById("contact");
-const darkmodebtn= document.getElementById("darkmode")
-const paragraphs = document.querySelectorAll("p")
-const navigation = document.querySelector(".navbar")
-const links = document.querySelectorAll(".nav")
-const prev = document.getElementById("prev")
-const next = document.getElementById("next")
-
-//Contact Button
-contactbtn.addEventListener("click", function() {
-    window.location.href="mailto:jaurelus12@gmail.com"
-});
-
+const paragraphs = document.querySelectorAll("p");
+const navigation = document.querySelector(".navbar");
+const links = document.querySelectorAll(".nav");
+const h1 = document.querySelectorAll("h1");
 
 //Dark Mode
-function darkMode(){
-    document.body.classList.toggle("dark");
+function darkMode() {
+  document.body.classList.toggle("dark");
 
-    paragraphs.forEach(p=>{
-        p.classList.toggle("dark");
-    })
-    navigation.classList.toggle("dark");
+  paragraphs.forEach((p) => {
+    p.classList.toggle("dark");
+  });
+  navigation.classList.toggle("dark");
 
-    links.forEach(nav=>{
-        nav.classList.toggle("dark");
-    })
-    document.querySelector("h1").classList.toggle("dark");
+  links.forEach((nav) => {
+    nav.classList.toggle("dark");
+  });
+  h1.forEach((h1) => {
+    h1.classList.toggle("dark");
+  });
 
-    document.getElementById("contact").classList.toggle("dark")
+  document.getElementById("contact").classList.toggle("dark");
 
-
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("theme","dark")
-    }
-    else{localStorage.setItem("theme", "light")}
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 }
 
+function setTheme() {
+  document.body.classList.add("dark");
+  paragraphs.forEach((p) => {
+    p.classList.add("dark");
+  });
+  navigation.classList.add("dark");
 
-function setTheme(){
-document.body.classList.add("dark");
-paragraphs.forEach(p=>{
-        p.classList.add("dark");
-    })
-    navigation.classList.add("dark");
-
-    links.forEach(nav=>{
-        nav.classList.add("dark");
-    })
-    document.querySelector("h1").classList.add("dark");
-    document.getElementById("contact").classList.add("dark")
-
+  links.forEach((nav) => {
+    nav.classList.add("dark");
+  });
+  h1.forEach((h1) => {
+    h1.classList.toggle("dark");
+  });
+  document.getElementById("contact").classList.add("dark");
 }
 //applytheme
-function getTheme(){
-
-if(localStorage.getItem("theme")=="dark"){
-setTheme();
+function getTheme() {
+  if (localStorage.getItem("theme") == "dark") {
+    setTheme();
+  }
+  console.log(`${localStorage.getItem("theme")}`);
 }
-console.log(`${localStorage.getItem("theme")}` );
+
+//About Page
+let i = 0;
+function nextPic() {
+  const pics = document.querySelectorAll(".slideshowPics");
+  //Next button shows next image
+  pics[i].style.display = "none";
+  i = (i + 1) % pics.length;
+  pics[i].style.display = "flex";
+}
+function prevPic() {
+  const pics = document.querySelectorAll(".slideshowPics");
+  pics[i].style.display = "none";
+  i = (i + pics.length - 1) % pics.length;
+  pics[i].style.display = "flex";
 }
 
+//Contact Page
+document.getElementById("ghPic").addEventListener("mouseover", () => {
+  document.getElementById("ghPrompt").style.display = "flex";
+});
+document.getElementById("ghPic").addEventListener("mouseout", () => {
+  document.getElementById("ghPrompt").style.display = "none";
+});
+document.getElementById("ghPic").addEventListener("click", () => {
+  window.open("https://github.com/Jaurelus");
+});
 
-/*
-document.getElementById("p1").addEventListener("click", (event)=>{
-    event.preventDefault();
-    if(navigation.classList.contains("dark")){
-        window.location.href = "index.html"
-        getTheme();
-    }
-})
+// Control behavior of the resume picture
+function previewResume() {
+  const res = document.getElementById("resumePic");
 
-    
-
-document.getElementById("p2").addEventListener("click", (event)=>{
-    event.preventDefault();
-   if(navigation.classList.contains("dark")){
-        getTheme();
-        window.location.href = "about.html"
-        getTheme();
+  //Change the opacity, and show helper text
+  res.style.cursor = "pointer";
+  res.style.opacity = 0.5;
+  document.getElementById("resHelper").style.display = "contents";
+  //Event listener for click
+  res.addEventListener("click", () => {
+    window.open("../Aurelus_Jayden_Resume.pdf", "_blank");
+  });
+  //Event listener for mosuse exit to undo everything
+  res.addEventListener("mouseleave", () => {
+    res.style.opacity = 1.0;
+    document.getElementById("resHelper").style.display = "none";
+  });
 }
-})
-
-document.getElementById("p3").addEventListener("click", (event)=>{
-    event.preventDefault();
-    if(navigation.classList.contains("dark")){
-        window.location.href = "portfolio.html"
-    getTheme();
-}
-})
-
-/*
-darkmodebtn.addEventListener("click", function(){
-    paragraphs.forEach(p=>{
-        p.classList.toggle("dark");
-    })
-}
-)
-
-darkmodebtn.addEventListener("click", function(){
-    navigation.classList.toggle("dark");
-})
-
-darkmodebtn.addEventListener("click", function(){
-    links.forEach(nav=>{
-        nav.classList.toggle("dark");
-    })
-darkmodebtn.addEventListener("click", ()=>{
-    document.querySelector("h1").classList.toggle("dark");
-})
-})
-*/

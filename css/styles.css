@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 /*
-Class gets . 
+Class gets .
 IDs get #
 */
 /*
@@ -10,12 +13,37 @@ Non photo blue: AFDEDC
 Ash gray: #516763
 
 */
+:root {
+  --bgl: #f0f7ee;
+  --bgd: #121212;
+  --mint: #98d9c2;
+  --pblue: #afdedc;
+}
+.mooli-regular {
+  font-family: "Mooli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-p {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 1;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
 body {
-  background-color: #f0f7ee;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--bgl);
+  overflow-x: clip;
 }
-body.dark {
-  background-color: #121212;
-}
+
 #darkmode {
   position: fixed;
   top: 75px;
@@ -28,6 +56,359 @@ body.dark {
   text-align: right;
 }
 
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+p {
+  font-family: "Roboto Mono";
+}
+a:hover {
+  color: #1a4d4a;
+}
+
+a:link {
+  color: #2b7a78;
+}
+a:visited {
+  color: #2b7a78;
+}
+
+.nav {
+  font-family: "Roboto Mono";
+  font-size: 1.5em;
+  font-optical-sizing: auto;
+}
+.homeMainContent {
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  justify-content: center;
+}
+.navLinks {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20%;
+}
+
+.pichead {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 2%;
+}
+.picText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  gap: 5%;
+}
+.bolden {
+  font-weight: 900;
+}
+#homepic {
+  width: 20%;
+  border-radius: 50%;
+}
+#logo {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  height: 50px;
+}
+.name {
+  margin-top: 7%;
+  text-align: center;
+}
+.blurb {
+  display: flex;
+  justify-content: center;
+}
+#homep {
+  width: 50%;
+  text-align: center;
+}
+
+h1 {
+  text-align: right;
+  font-size: 3em;
+  font-family: "Syne", sans-serif;
+  color: var(--bgd);
+}
+
+#contact {
+  display: block;
+  background-color: #f0f7ee;
+  border-color: rgb(60, 50, 30);
+  border-radius: 10px;
+  margin: auto;
+  bottom: 25px;
+  color: #516763;
+}
+.bento {
+  margin-top: 5%;
+
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 2%;
+  flex-direction: row;
+}
+#dunk {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+}
+.bentoBox {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: #222222;
+}
+.firstCol {
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.firstCol > p {
+  position: relative;
+  z-index: 2;
+}
+.secondCol {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+}
+.thirdCol {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 3%;
+}
+#sports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+#fl-map {
+  width: 120px;
+  height: auto;
+  fill: var(--mint);
+}
+#gamer {
+  width: 60px;
+  height: auto;
+}
+#dumbbell {
+  width: 60px;
+  height: auto;
+}
+#muscle {
+  width: 60px;
+  height: auto;
+}
+#FL {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#xbox {
+  width: 60px;
+  height: auto;
+}
+.football {
+  margin-top: 5%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: start;
+}
+.soccer {
+  margin-right: 25%;
+  display: flex;
+  justify-content: end;
+}
+/* two-icon boxes: diagonal, like Sports */
+.pair img:nth-of-type(1) {
+  margin-top: auto;
+  margin-left: 25%;
+}
+.pair img:nth-of-type(2) {
+  margin-bottom: auto;
+  margin-right: 25%;
+}
+
+#football {
+  width: 60px;
+  height: auto;
+}
+#soccer {
+  width: 60px;
+  height: auto;
+}
+.aboutMainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  gap: 5%;
+}
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 30%;
+  margin-left: 10%;
+}
+#openCurl {
+  text-align: left;
+}
+#closeCurl {
+  text-align: right;
+}
+.chip {
+  position: sticky;
+  width: 20%;
+  stroke: #2b7a774b;
+  fill: #1231312d;
+  z-index: -200;
+}
+#homeChip {
+  position: absolute;
+  margin-top: -5%;
+  right: -5%;
+}
+#aboutChip {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: -95%;
+}
+#portfolioChip1 {
+  position: absolute;
+  margin-top: -15%;
+  margin-left: 50%;
+  z-index: -999;
+}
+#portfolioChip2 {
+  position: absolute;
+  margin-bottom: -40%;
+  margin-left: -5%;
+}
+
+.ghWindow {
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+#ghPic {
+  width: 50%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#ghPic:hover {
+  opacity: 0.5;
+}
+#ghPrompt {
+  display: none;
+  bottom: 40px;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-weight: 900;
+}
+
+.resume {
+  width: 100%;
+  margin-left: -10%;
+  margin-top: -2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+#resumePic {
+  width: 90%;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5%;
+}
+
+#resHelper {
+  position: sticky;
+  margin-top: -5%;
+  font-size: 1em;
+  color: black;
+}
+.profileMainContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-right: 10%;
+}
+.githubYap {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.githubYap p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* Dark */
+body.dark {
+  background-color: var(--bgd);
+}
+p.dark {
+  color: var(--bgl);
+}
+h1.dark {
+  color: var(--mint);
+}
+a.dark {
+  color: var(--pblue);
+}
+
 body.dark #darkmode {
   background-color: #121212;
   border-radius: 8px;
@@ -37,163 +418,7 @@ body.dark #darkmode {
   color: #f0f7ee;
 }
 
-.navbar {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 30px;
-  border-bottom: 2px solid #516763;
-  margin-bottom: 5%;
-}
-.navbar.dark {
-  border-bottom: 2px solid #98d9c2;
-}
-
-.nav:link {
-  font-size: 24px;
-  margin: 100px;
-  color: rgb(229, 8, 144);
-}
-
-.nav:visited {
-  margin: 100px;
-  color: #516763;
-}
-
-.nav:hover {
-  color: rgb(254, 9, 54);
-}
-
-.nav:active {
-  margin: 100px;
-  color: rgb(91, 205, 3);
-}
-
-.nav.dark:link {
-  font-size: 24px;
-  margin: 100px;
-  color: rgb(229, 8, 144);
-}
-
-.nav.dark:visited {
-  margin: 100px;
-  color: #abf7f3;
-}
-
-.nav.dark:hover {
-  color: rgb(254, 9, 54);
-}
-
-.nav.dark:active {
-  margin: 100px;
-  color: rgb(91, 205, 3);
-}
-
-h1 {
-  text-align: right;
-  color: rgb(70, 80, 40);
-  font-size: 3em;
-}
-h1.dark {
-  color: #98d9c2;
-}
-#name {
-  margin-left: auto;
-}
-p {
-  color: rgb(60, 50, 30);
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5em;
-  font-weight: 500;
-  border-radius: 50%;
-}
-p.dark {
-  color: #f0f7ee;
-}
-
-.pichead {
-  margin-top: 75px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 75px;
-  justify-content: center;
-}
-
-#homep {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5em;
-  font-weight: 500;
-  border-radius: 50%;
-}
-
-#homepic {
-  height: 400px;
-  width: 325px;
-  padding: 50px;
-  border-radius: 50%;
-  margin-right: auto;
-}
-
-#contact {
-  display: block;
-  background-color: #f0f7ee;
-  border-color: rgb(60, 50, 30);
-  border-radius: 10px;
-  margin: auto;
-  color: #516763;
-}
-#contact.dark {
-  background-color: #121212;
-  color: white;
-  border-color: #98d9c2;
-}
-
-/*About Page CSS*/
-
-.slideshowbox {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  height: 300px;
-  width: 300px;
-}
-.buttons {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-
-  gap: 30px;
-}
-#prev {
-  left: auto;
-  right: auto;
-}
-#next {
-  margin-right: auto;
-}
-
-.mainContent {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
-#ghPic {
-  width: 100%;
-  height: 50vh;
-  margin-bottom: 5%;
-}
-
-#logo {
-  position: absolute;
-  width: 5%;
-  left: 25px;
-  top: 5px;
-}
-
+/*  Mobile */
 @media (max-width: 600px) {
   body {
     max-width: 100%;
@@ -223,13 +448,7 @@ p.dark {
     align-items: center;
   }
   .navLinks {
-    position: relative;
-    display: flex;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
   }
   .nav:link {
     font-size: 2.5em;
