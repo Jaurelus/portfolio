@@ -428,14 +428,35 @@ body.dark #darkmode {
 
 /*  Mobile */
 @media (max-width: 600px) {
-  body {
-    max-width: 100%;
+  /* padding counts inside the width so nothing exceeds 100% */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
+
   html,
   body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-snap-type: none;
+  }
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 0 16px 40px;
+    scroll-snap-align: none;
     overflow-x: hidden;
   }
 
+  img,
+  svg {
+    max-width: 100%;
+  }
+
+  /* ---- Nav ---- */
   #darkmode {
     color: #121212;
     top: 5px;
@@ -447,47 +468,174 @@ body.dark #darkmode {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    width: 95vw;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     border-bottom: 2px solid #516763;
-    margin-bottom: 5%;
+    margin-bottom: 16px;
     align-items: center;
+    padding: 10px 0;
   }
   .navLinks {
     width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+    padding: 0 68px 0 46px; /* clears the logo and the theme button */
   }
-  .nav:link {
-    font-size: 2.5em;
-    margin: 10%;
-  }
+  .nav,
+  .nav:link,
   .nav:link.dark {
-    font-size: 2.5em;
-    margin: 10%;
+    font-size: 0.95em;
+    margin: 0;
+    white-space: nowrap;
   }
   #logo {
-    transform: scale(2);
+    height: 30px;
+    width: auto;
+    top: 8px;
+    left: 8px;
+    transform: none;
+  }
+
+  /* ---- Home ---- */
+  h1 {
+    font-size: 1.9em;
+    text-align: center;
+  }
+  .name {
+    margin-top: 10px;
   }
   .pichead {
-    width: 40%;
-    transform: scale(0.5);
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+    transform: none;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin: 16px 0;
   }
-  #homep {
-    font-size: 1em;
+  #homepic {
+    width: 45%;
+    max-width: 150px;
+  }
+  .picText {
+    text-align: center;
+    gap: 4px;
+  }
+  .picText h1 {
+    display: none; /* the { } braces don't read well stacked */
+  }
+  #homep,
+  .githubYap p {
+    width: 100%;
+    font-size: 0.95em;
   }
   p {
-    font-size: 1em;
+    font-size: 0.95em;
+    line-height: 1.5;
   }
-  .navbar {
-    font-size: 10px;
+
+  /* ---- About ---- */
+  .aboutMainContent {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    gap: 24px;
   }
-  .navLinks {
-    font-size: 0.75em;
+  .aboutText {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* real bento: 2 columns with a feature tile across the top */
+  .bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 0;
+    width: 100%;
+  }
+  .firstCol {
+    grid-column: 1 / -1;
+    height: 190px;
+    justify-content: flex-start;
+  }
+  .secondCol,
+  .thirdCol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+  .secondCol .bentoBox,
+  .thirdCol .bentoBox {
+    height: 130px;
+    justify-content: flex-start;
+    padding: 6px;
+  }
+  .bentoBox p {
+    font-size: 0.85em;
+    margin: 6px 0;
+  }
+  /* keep the diagonal icon look, scaled so nothing escapes the tile */
+  .pair img:nth-of-type(1),
+  .football {
+    margin-left: 12%;
+  }
+  .pair img:nth-of-type(2),
+  .soccer {
+    margin-right: 12%;
+  }
+  .football {
+    margin-top: 0;
+  }
+  #fl-map {
+    width: 70px;
+  }
+  #gamer,
+  #dumbbell,
+  #muscle,
+  #football,
+  #soccer,
+  #xbox {
+    width: 40px;
+  }
+
+  /* ---- Portfolio ---- */
+  .profileMainContent {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    gap: 24px;
+  }
+  .githubYap,
+  .ghWindow {
+    width: 100%;
+  }
+  #ghPic {
+    width: 85%;
+    margin-bottom: 16px;
+  }
+  .resume {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  #resumePic {
+    width: 100%;
+    height: auto;
+    padding-bottom: 8px;
+  }
+  #resHelper {
+    margin-top: 0;
+    font-size: 0.85em;
+  }
+
+  /* decorative circuit SVGs sit off-canvas on narrow screens */
+  .chip {
+    display: none;
   }
 }
