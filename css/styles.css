@@ -448,7 +448,9 @@ body.dark #darkmode {
     min-height: auto;
     padding: 0 16px 40px;
     scroll-snap-align: none;
-    overflow-x: hidden;
+    /* clip, not hidden: hidden would force overflow-y to auto and make
+       each section its own scroll container */
+    overflow-x: clip;
   }
 
   img,
@@ -634,8 +636,26 @@ body.dark #darkmode {
     font-size: 0.85em;
   }
 
-  /* decorative circuit SVGs sit off-canvas on narrow screens */
+  /* decorative circuit SVGs: bigger, and pulled back on-screen.
+     section's overflow-x: hidden clips the bleed instead of scrolling. */
   .chip {
-    display: none;
+    width: 45%;
+    height: auto;
+  }
+  #homeChip {
+    margin-top: 0;
+    right: -8%;
+  }
+  #aboutChip {
+    margin-top: 0;
+    margin-left: -8%;
+  }
+  #portfolioChip1 {
+    margin-top: -8%;
+    margin-left: 45%;
+  }
+  #portfolioChip2 {
+    margin-bottom: -20%;
+    margin-left: -8%;
   }
 }
