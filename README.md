@@ -2,7 +2,7 @@
 
 My personal portfolio site, built from scratch with vanilla HTML, CSS, and JavaScript.
 
-**Live at [jaydevs.store](https://jaydevs.store)**
+**Live at [jaydevs.store](https://jaydevs.work)**
 
 Three scrolling sections — a landing page, a bit about me outside of code, and my projects and resume. Features a dark mode toggle that remembers your preference, scroll-snap navigation, and a custom circuit-board SVG motif.
 
